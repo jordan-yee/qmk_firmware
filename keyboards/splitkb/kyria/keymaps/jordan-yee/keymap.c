@@ -271,17 +271,26 @@ bool oled_task_user(void) {
             case _QWERTY:
                 oled_write_P(PSTR("QWERTY\n"), false);
                 break;
+            case _NUMSYM:
+                oled_write_P(PSTR("Numsym\n"), false);
+                break;
+            case _CODE:
+                oled_write_P(PSTR("Code\n"), false);
+                break;
             case _NAV:
                 oled_write_P(PSTR("Nav\n"), false);
                 break;
-            case _NUMSYM:
-                oled_write_P(PSTR("Numsym\n"), false);
+            case _NUMPAD:
+                oled_write_P(PSTR("Numpad\n"), false);
                 break;
             case _FUNCTION:
                 oled_write_P(PSTR("Function\n"), false);
                 break;
             case _ADJUST:
                 oled_write_P(PSTR("Adjust\n"), false);
+                break;
+            case _MOUSE:
+                oled_write_P(PSTR("Mouse\n"), false);
                 break;
             default:
                 oled_write_P(PSTR("Undefined\n"), false);
