@@ -208,17 +208,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
  * |        |      |MsAcl0|MsAcl1|MsAcl2|      |                              | MsLt | MsDn | MsUp | MsRt |      |        |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * |        |      |      |      |      |      |      |      |  |      |      | MBtn3| MBtn4| MBtn5|      |      |        |
+ * |        |      |      |      |      |      |      |      |  | MBtn2|      | MBtn3| MBtn4| MBtn5|      |      |        |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
- *                        |      |      |      |      |      |  | MBtn2| MBtn1|Toggle|      |      |
+ *                        |      |      |      |      |      |  |      | MBtn1|Toggle|      |      |
  *                        |      |      |      |      |      |  |      |      |Mouse |      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
     [_MOUSE] = LAYOUT(
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                     KC_WH_L , KC_WH_D, KC_WH_U, KC_WH_R, XXXXXXX, XXXXXXX,
       XXXXXXX, XXXXXXX, KC_ACL0, KC_ACL1, KC_ACL2, XXXXXXX,                                     KC_MS_L , KC_MS_D, KC_MS_U, KC_MS_R, XXXXXXX, XXXXXXX,
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_BTN3 , KC_BTN4, KC_BTN5, XXXXXXX, XXXXXXX, XXXXXXX,
-                                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_BTN2, KC_BTN1,TG(MOUSE), XXXXXXX, XXXXXXX
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_BTN2, XXXXXXX, KC_BTN3 , KC_BTN4, KC_BTN5, XXXXXXX, XXXXXXX, XXXXXXX,
+                                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_BTN1,TG(MOUSE), XXXXXXX, XXXXXXX
     ),
 
 // /*
