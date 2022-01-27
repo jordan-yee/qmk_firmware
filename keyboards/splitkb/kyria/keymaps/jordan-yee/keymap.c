@@ -204,21 +204,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Mouse Layer: Mouse control layer
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * |        |      |      |MWhlUp| MBtn3|      |                              |      | MBtn1| MsUp | MBtn2|      |        |
+ * |        |      |      |      |      |      |                              |MWhlLt|MWhlDn|MWhlUp|MWhlRt|      |        |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- * |        |      |MWhlLt|MWhlDn|MWhlRt|      |                              | MBtn4| MsLt | MsDn | MsRt | MBtn5|        |
+ * |        |      |      |      |      |      |                              | MsLt | MsDn | MsUp | MsRt |      |        |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * |        |      |      |      |      |      |      |      |  |      |      |      |      |      |      |      |        |
+ * |        |      |      |      |      |      |      |      |  |      |      | MBtn3| MBtn4| MBtn5|      |      |        |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
- *                        |      |      |      |      |      |  |      |      |Toggle|      |      |
+ *                        |      |      |      |      |      |  | MBtn2| MBtn1|Toggle|      |      |
  *                        |      |      |      |      |      |  |      |      |Mouse |      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
     [_MOUSE] = LAYOUT(
-      XXXXXXX, XXXXXXX, XXXXXXX, KC_WH_U, KC_BTN3, XXXXXXX,                                     XXXXXXX , KC_BTN1, KC_MS_U, KC_BTN2, XXXXXXX, XXXXXXX,
-      XXXXXXX, XXXXXXX, KC_WH_L, KC_WH_D, KC_WH_R, XXXXXXX,                                     KC_BTN4 , KC_MS_L, KC_MS_D, KC_MS_R, KC_BTN5, XXXXXXX,
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,TG(MOUSE), XXXXXXX, XXXXXXX
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                     KC_WH_L , KC_WH_D, KC_WH_U, KC_WH_R, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                     KC_MS_L , KC_MS_D, KC_MS_U, KC_MS_R, XXXXXXX, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_BTN3 , KC_BTN4, KC_BTN5, XXXXXXX, XXXXXXX, XXXXXXX,
+                                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_BTN2, KC_BTN1,TG(MOUSE), XXXXXXX, XXXXXXX
     ),
 
 // /*
