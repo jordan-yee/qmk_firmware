@@ -31,4 +31,8 @@
 // #define SPLIT_USB_DETECT
 // #define NO_USB_STARTUP_CHECK
 
+// Fix clockwise direction of rotary encoder
 #define ENCODER_DIRECTION_FLIP
+
+// Limit to 8 layers to save space (could bump to 16 if needed)
+#define LAYER_STATE_8BIT
