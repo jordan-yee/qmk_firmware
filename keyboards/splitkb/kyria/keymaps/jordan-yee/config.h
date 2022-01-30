@@ -25,7 +25,12 @@
 #endif
 
 // Lets you roll mod-tap keys
-#define IGNORE_MOD_TAP_INTERRUPT
+// NOTE: This is probably what you want if you use Mod/Tap for home row keys,
+// but not if you want instantaneous respose from Mod/Tap mod combos.
+// #define IGNORE_MOD_TAP_INTERRUPT
+
+// Make Mod/Tap keys use the hold key press if another key is pressed
+#define PERMISSIVE_HOLD
 
 // If you are using an Elite C rev3 on the slave side, uncomment the lines below:
 // #define SPLIT_USB_DETECT
