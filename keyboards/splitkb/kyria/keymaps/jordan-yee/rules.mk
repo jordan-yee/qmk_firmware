@@ -1,3 +1,5 @@
+CONSOLE_ENABLE = YES       # Enable for debugging / Disable to save space
+
 ENCODER_ENABLE = yes       # Enables the use of one or more encoders
 GRAVE_ESC_ENABLE = no      # Disable to save space
 MAGIC_ENABLE = no          # Disable to save space
