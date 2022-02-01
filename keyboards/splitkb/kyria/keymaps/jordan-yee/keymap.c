@@ -43,6 +43,7 @@ enum layers {
 #define ALT_ENT  MT(MOD_LALT, KC_ENT)
 #define CTL_ENT  MT(MOD_RCTL, KC_ENT)
 #define SFT_CTL  MT(MOD_RSFT, KC_RCTL)
+#define SFT_MINS  MT(MOD_RSFT, KC_MINS)
 
 #include QMK_KEYBOARD_H
 
@@ -62,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |        |      |      |      |      |      |                              |      |      |      |      |      |        |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   V  |   B  | [ {  |CapsLk|  |      |  ] } |   N  |   M  | ,  < | . >  | /  ? | RShift/|
- * |        |      |      |      |      |      |      |      |  |      |      |      |      |      |      |      | RCtrl  |
+ * |        |      |      |      |      |      |      |      |  |      |      |      |      |      |      |      | -      |
  * `----------------------+------+------+------+------+------|  |      |------+------+------+------+----------------------'
  *                        |Adjust| LGUI | LAlt/| Space| Nav  |  |Numsym| Space| Code |F-keys| Mute |
  *                        |      |      | Ent  |      |      |  |      |      |      |      |      |
@@ -71,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_QWERTY] = LAYOUT(
      KC_TAB  , KC_Q ,  KC_W   ,  KC_E  ,   KC_R ,   KC_T ,                                     KC_Y,   KC_U ,  KC_I ,   KC_O ,  KC_P , KC_BSPC ,
      CTL_ESC , KC_A ,  KC_S   ,  KC_D  ,   KC_F ,   KC_G ,                                     KC_H,   KC_J ,  KC_K ,   KC_L ,KC_SCLN, CTL_QUOT,
-     KC_LSFT , KC_Z ,  KC_X   ,  KC_C  ,   KC_V ,   KC_B , KC_LBRC, KC_CAPS, XXXXXXX, KC_RBRC, KC_N,   KC_M ,KC_COMM, KC_DOT ,KC_SLSH, SFT_CTL ,
+     KC_LSFT , KC_Z ,  KC_X   ,  KC_C  ,   KC_V ,   KC_B , KC_LBRC, KC_CAPS, XXXXXXX, KC_RBRC, KC_N,   KC_M ,KC_COMM, KC_DOT ,KC_SLSH, SFT_MINS,
                                  ADJUST, KC_LGUI, ALT_ENT, KC_SPC , NAV    , NUMSYM , KC_SPC , CODE,  FKEYS ,KC_MUTE
     ),
 
@@ -142,20 +143,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Numpad Layer: A numpad number grid
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * |        |      |      |      |      |      |                              |      |   6  |   8  |   9  |      |        |
+ * |        |      |      |      |      |      |                              |      |   6  |   8  |   9  |   -  |    /   |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- * |        |      |      |      |      |      |                              |      |   4  |   5  |   6  |      |        |
+ * |        |      |      |      |      |      |                              |      |   4  |   5  |   6  |   +  |    *   |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * |        |      |      |      |      |      |      |Numlck|  |      |      |      |   1  |   2  |   3  |      |        |
+ * |        |      |      |      |      |      |      |Numlck|  |      |      |      |   1  |   2  |   3  |   .  |  Enter |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
  *                        |      |      |      |      |      |  |      |Toggle|   0  |      |      |
  *                        |      |      |      |      |      |  |      |Numpad|      |      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
     [_NUMPAD] = LAYOUT(
-      _______, _______, _______, _______, _______, _______,                                         _______, KC_P7  , KC_P8  , KC_P9, _______, _______,
-      _______, _______, _______, _______, _______, _______,                                         _______, KC_P4  , KC_P5  , KC_P6, _______, _______,
-      _______, _______, _______, _______, _______, _______, _______, KC_NLCK, _______, _______    , _______, KC_P1  , KC_P2  , KC_P3, _______, _______,
+      _______, _______, _______, _______, _______, _______,                                         _______, KC_P7  , KC_P8  , KC_P9, KC_PMNS, KC_PSLS,
+      _______, _______, _______, _______, _______, _______,                                         _______, KC_P4  , KC_P5  , KC_P6, KC_PPLS, KC_PAST,
+      _______, _______, _______, _______, _______, _______, _______, KC_NLCK, _______, _______    , _______, KC_P1  , KC_P2  , KC_P3, KC_PDOT, KC_PENT,
                                  _______, _______, _______, _______, _______, _______, TG(NUMPAD) , KC_P0  , _______, _______
     ),
 
