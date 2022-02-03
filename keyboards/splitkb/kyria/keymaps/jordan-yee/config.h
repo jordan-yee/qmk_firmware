@@ -41,3 +41,8 @@
 
 // Limit to 8 layers to save space (could bump to 16 if needed)
 #define LAYER_STATE_8BIT
+
+// 16 matches a refresh rate of 60hz and significantly speeds up the cursor
+#define MOUSEKEY_INTERVAL 16
+
+#define MOUSEKEY_DELAY 100
