@@ -17,6 +17,7 @@
 
 enum layers {
     _QWERTY = 0,
+    _ALTGUI,
     _NUMSYM,
     _CODE,
     _NAV,
@@ -30,6 +31,7 @@ enum layers {
 #define QWERTY   DF(_QWERTY)
 
 #define CODE     MO(_CODE)
+#define ALTGUI   TG(_ALTGUI)
 #define NUMSYM   MO(_NUMSYM)
 #define NAV      MO(_NAV)
 #define NUMPAD   MO(_NUMPAD)
@@ -62,18 +64,39 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |Ctrl/Esc|   A  |   S  |   D  |   F  |   G  |                              |   H  |   J  |   K  |   L  | ;  : | Ctrl/' |
  * |        |      |      |      |      |      |                              |      |      |      |      |      |        |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * | LShift |   Z  |   X  |   C  |   V  |   B  | [ {  |CapsLk|  |      |  ] } |   N  |   M  | ,  < | . >  | /  ? | RShift/|
- * |        |      |      |      |      |      |      |      |  |      |      |      |      |      |      |      | -      |
+ * | LShift |   Z  |   X  |   C  |   V  |   B  | [ {  |CapsLk|  |      |  ] } |   N  |   M  | ,  < | . >  | /  ? | -      |
+ * |        |      |      |      |      |      |      |      |  |      |      |      |      |      |      |      |        |
  * `----------------------+------+------+------+------+------|  |      |------+------+------+------+----------------------'
- *                        |Adjust| Space| LGUI | LAlt/| Nav  |  |Numsym| Space| Code |F-keys| Mute |
+ *                        |Adjust|ALTGUI| LGUI | LAlt/| Nav  |  |Numsym| Space| Code |F-keys| Mute |
  *                        |      |      |      | Ent  |      |  |      |      |      |      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
     [_QWERTY] = LAYOUT(
      KC_TAB  , KC_Q ,  KC_W   ,  KC_E  ,   KC_R ,   KC_T ,                                     KC_Y,   KC_U ,  KC_I ,   KC_O ,  KC_P , KC_BSPC ,
      CTL_ESC , KC_A ,  KC_S   ,  KC_D  ,   KC_F ,   KC_G ,                                     KC_H,   KC_J ,  KC_K ,   KC_L ,KC_SCLN, CTL_QUOT,
-     KC_LSFT , KC_Z ,  KC_X   ,  KC_C  ,   KC_V ,   KC_B , KC_LBRC, KC_CAPS, XXXXXXX, KC_RBRC, KC_N,   KC_M ,KC_COMM, KC_DOT ,KC_SLSH, SFT_MINS,
-                                 ADJUST, KC_SPC, KC_LGUI, ALT_ENT , NAV    , NUMSYM , KC_SPC , CODE,  FKEYS ,KC_MUTE
+     KC_LSFT , KC_Z ,  KC_X   ,  KC_C  ,   KC_V ,   KC_B , KC_LBRC, KC_CAPS, XXXXXXX, KC_RBRC, KC_N,   KC_M ,KC_COMM, KC_DOT ,KC_SLSH,     MINS,
+                                 ADJUST, ALTGUI , KC_LGUI, ALT_ENT , NAV   , NUMSYM , KC_SPC , CODE,  FKEYS ,KC_MUTE
+    ),
+
+/*
+ * Mod Key Layer: Used to toggle the assignment of the windows/super/mod key
+ *
+ * ,-------------------------------------------.                              ,-------------------------------------------.
+ * |        |      |      |      |      |      |                              |      |      |   [  |   ]  |      |        |
+ * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
+ * |        |      |      |      |      |   \  |                              |   |  |   (  |   )  |   {  |   }  |    `   |
+ * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
+ * |        |      |      |      |      |      |      |      |  |      |      |      |   _  |   <  |   >  |   =  |        |
+ * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
+ *                        |      |      |Numlck|      |      |  |      |      |      |      |      |
+ *                        |      |      |      |      |      |  |      |      |      |      |      |
+ *                        `----------------------------------'  `----------------------------------'
+ */
+    [_ALTGUI] = LAYOUT(
+      _______, _______, _______, _______, _______, _______,                                     _______, _______, _______, _______, _______, _______,
+      _______, _______, _______, _______, _______, _______,                                     _______, _______, _______, _______, _______, _______,
+      _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+                                 _______, _______, KC_NLCK, _______, _______, _______, _______, _______, _______, _______
     ),
 
 /*
