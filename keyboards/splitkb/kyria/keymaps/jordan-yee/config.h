@@ -40,7 +40,7 @@
 #define ENCODER_DIRECTION_FLIP
 
 // Limit to 8 layers to save space (could bump to 16 if needed)
-#define LAYER_STATE_8BIT
+#define LAYER_STATE_16BIT
 
 // 16 matches a refresh rate of 60hz and significantly speeds up the cursor
 #define MOUSEKEY_INTERVAL 16
