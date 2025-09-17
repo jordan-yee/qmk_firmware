@@ -296,6 +296,9 @@ bool oled_task_user(void) {
             case _QWERTY:
                 oled_write_P(PSTR("QWERTY\n"), false);
                 break;
+            case _ALTGUI:
+                oled_write_P(PSTR("QWERTY NLK\n"), false);
+                break;
             case _NUMSYM:
                 oled_write_P(PSTR("Numsym\n"), false);
                 break;
