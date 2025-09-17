@@ -8,3 +8,4 @@ OLED_DRIVER = ssd1306      # Enables the use of OLED displays
 OLED_ENABLE = yes
 RGBLIGHT_ENABLE = yes      # Enable keyboard RGB underglow
 SPACE_CADET_ENABLE = no    # Disable to save space
+LAYER_STATE_16BIT = yes    # Enable up to 16 layers
