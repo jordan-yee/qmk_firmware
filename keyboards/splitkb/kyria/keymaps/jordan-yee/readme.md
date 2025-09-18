@@ -61,6 +61,9 @@ several years and updating my custom keymap. (09/17/2025)
    - Plug in the second (Pro Micro/Right) half and repeat.
      - This half shows up as `Caterina device connected...` after pressing the
        bootloader/reset button.
+     - UPDATE: You may have to double-tap the reset button for this one. This
+       time, my first attempt at auto-flashing with only pressing it once had
+       errors, but the second time I double-tapped the reset and it worked.
      - This one automatically disconnects after only a few seconds, making it
        harder to flash--you just have to flash it while you can.
      - Checking/enabling `Auto-Flash` is probably the way to go here.
