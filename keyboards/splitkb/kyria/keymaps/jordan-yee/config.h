@@ -30,7 +30,7 @@
 // #define IGNORE_MOD_TAP_INTERRUPT
 
 // Make Mod/Tap keys use the hold key press if another key is pressed
-#define PERMISSIVE_HOLD
+#define HOLD_ON_OTHER_KEY_PRESS
 
 // If you are using an Elite C rev3 on the slave side, uncomment the lines below:
 // #define SPLIT_USB_DETECT
